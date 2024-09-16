@@ -26,9 +26,17 @@ I choose iptables due to its user frendliness and because its a long standing fr
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20help.jpg)
 
 In this picture we can see the useful commands.
--A is append -D delete -L list -F erase -j target -s source -d destination
+-A is append rule to the chain -D delete rule  -L list -F erase list -j target -s source -d destination
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/72d91838330502b7a7e96f8cd8241c9721629cdd/iptablespolicy.png)
+This is the default configuration and all the chains are in ACCEPT. 
+Means that we accept connections without restrictions.
+
 ![image alt](https://github.com/fabianvagi91/projects/blob/f2a31b3737ea420a74f6b209cd7e7361dece0551/Iptablesblockfacebook.jpg)
+As first try i pinged facebook.com and with the outcome of the ping i applyed the first rule.
+To block any connection coming and going to our computer coming from facebook.com
+Its important to note iptables is going to make a DNS lookup only after the rule has been made.
+For its reason i pinged facebook.com so i can use the IP address of the domain.
+
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20outcome.png)
 ![image alt]( iptablesblock)
