@@ -36,6 +36,5 @@ As first try i pinged facebook.com and with the outcome of the ping i applyed th
 To block any connection coming and going to our computer coming from facebook.com
 Its important to note iptables is going to make a DNS lookup only after the rule has been made.
 For its reason i pinged facebook.com so i can use the IP address of the domain.
-
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20outcome.png)
 ![image alt]( iptablesblock)
