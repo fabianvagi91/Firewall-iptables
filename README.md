@@ -30,7 +30,6 @@ In this picture we can see the useful commands.
 ![image alt](https://github.com/fabianvagi91/projects/blob/72d91838330502b7a7e96f8cd8241c9721629cdd/iptablespolicy.png)
 This is the default configuration and all the chains are in ACCEPT. 
 Means that we accept connections without restrictions.
-
 ![image alt](https://github.com/fabianvagi91/projects/blob/f2a31b3737ea420a74f6b209cd7e7361dece0551/Iptablesblockfacebook.jpg)
 As first try i pinged facebook.com and with the outcome of the ping i applyed the first rule.
 To block any connection coming and going to our computer coming from facebook.com
