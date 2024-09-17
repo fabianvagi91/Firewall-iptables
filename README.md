@@ -36,4 +36,5 @@ To block any connection coming and going to our computer coming from facebook.co
 Its important to note iptables is going to make a DNS lookup only after the rule has been made.
 For its reason i pinged facebook.com so i can use the IP address of the domain.
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20outcome.png)
+The rules have been aplyed and we can see that we drop the packages coming from facebook.com and we accept the packages from cnn.com
 ![image alt]( iptablesblock)
