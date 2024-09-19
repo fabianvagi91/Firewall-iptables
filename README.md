@@ -36,19 +36,31 @@ To block any connection coming and going to our computer from facebook.com
 It's important to note that iptables will make a DNS lookup only at the time of the creation of the rule.
 For this reason, Its is preferable to use the IP address of the domain.
 ![image alt](https://github.com/fabianvagi91/projects/blob/c586794015d09f7287cf1434e439ad19697d0210/iptablescnnblock.jpg)
-In the second rule that we applied i created a rule that accept any package coming from cnn.
-Therefore i pinged the IP address of the domain.
+In the second rule that I applied, I created a rule that accepts any package coming from CNN.
+Therefore I pinged the IP address of the domain.
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/iptablesoutcome.png)
-The rules have been applied and we can see that we drop the packages coming from facebook.com and we accept the packages from cnn.com
-With facebook.com we dont have a response because its blocked and cnn.com we allowed to recieve traffic.
+The rules have been applied and we can see that we dropped the packages coming from facebook.com and we accepted the packages from cnn.com
+With facebook.com we don't have a response because it is blocked and cnn.com we allowed to receive traffic.
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/79cdb355161dcdd526e7da12da109fbfef845b8b/iptables-blockport-list.jpg)
-In the third rule that i applied two rules that blocks outgoing traffic to ports 80 and 443 which are HTTP and HTTPS traffic respectivetly.
-Any attemt to access websites from my kali machine will be bocked.
-Shows also the outcume of the rules that we applied.
+In the third rule, I applied two rules that block outgoing traffic to ports 80 and 443 which are HTTP and HTTPS traffic respectively.
+Any attempt to access websites from my Kali machine will be blocked.
+Shows also the outcome of the rules that we applied.
 
+![image alt](https://github.com/fabianvagi91/projects/blob/fc73b72a8f3782f8ce394e92d61a3d5ae5f6b78c/iptables-noconneciton.jpg)
+As the result of blocking the port 80 and 443 we dont recieve any package from any website
 
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/ipttables%20end.png)
-Becasue i was experimenting with this framework i erased all the rules that i made using the command sudo iptables -F.
+I was experimenting and learning with this framework so erased all the rules that I made using the command sudo iptables -F.
+
+conclution 
+
+I acquired a deeper understanding of how firewalls work and different open-source frameworks in Kali Linux.
+Learned about the iptables framework and the new version of nptables.
+nptables is better for a much bigger network and the migration from the old version (iptables) to the new version is hard but I chose this version because I wanted to experiment in a home network.
+The importance of the order of the rules is critical. This means that iptables will search rules until find their match.
+This means that the last two rules dropping ports 80 and 443 were placed before the domain rule, the user would never be able to reach cnn.com as the drop rules would match before reaching the domain rule.
+
+
