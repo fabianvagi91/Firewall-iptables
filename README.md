@@ -47,7 +47,8 @@ With facebook.com we dont have a response because its blocked and cnn.com we all
 In the third rule that i applied two rules that blocks outgoing traffic to ports 80 and 443 which are HTTP and HTTPS traffic respectivetly.
 Any attemt to access websites from my kali machine will be bocked.
 Shows also the outcume of the rules that we applied.
-![image alt](https://github.com/fabianvagi91/projects/blob/c586794015d09f7287cf1434e439ad19697d0210/iptables%20outcome2.png)
+
+
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/ipttables%20end.png)
 Becasue i was experimenting with this framework i erased all the rules that i made using the command sudo iptables -F.
