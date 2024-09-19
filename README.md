@@ -57,10 +57,7 @@ I was experimenting and learning with this framework so erased all the rules tha
 
 conclution 
 
-I acquired a deeper understanding of how firewalls work and different open-source frameworks in Kali Linux.
-Learned about the iptables framework and the new version of nptables.
-nptables is better for a much bigger network and the migration from the old version (iptables) to the new version is hard but I chose this version because I wanted to experiment in a home network.
-The importance of the order of the rules is critical. This means that iptables will search rules until find their match.
-This means that the last two rules dropping ports 80 and 443 were placed before the domain rule, the user would never be able to reach cnn.com as the drop rules would match before reaching the domain rule.
+I acquired a deeper understanding of how firewalls work and explored different open-source frameworks in Kali Linux. I learned about the iptables framework and the new version, nftables. Nftables is better suited for larger networks, and although migrating from the old version (iptables) to the new version is challenging, I chose to experiment with nftables in a home network.
 
+The order of the rules is critical. This means that iptables will search through the rules until it finds a match. For example, if the last two rules drop ports 80 and 443 and are placed before the domain rule, the user would never be able to reach cnn.com, as the drop rules would match before reaching the domain rule.
 
