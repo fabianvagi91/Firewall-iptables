@@ -30,10 +30,13 @@ In this picture we can see the useful commands.
 This is the default configuration and all the chains are in ACCEPT. 
 This means that we accept connections without restrictions.
 
+![image alt](https://github.com/fabianvagi91/projects/blob/6950366e5c8cfa3a78b012dac15e9eeaee5d1cd2/Iptablesblockfacebook.jpg) 
 On the first try, I pinged facebook.com, and based on the outcome of the ping, I applied the first rule.
 To block any connection coming and going to our computer from facebook.com
-It's important to note that iptables will make a DNS lookup only after the rule has been made.
-For this reason, I pinged facebook.com so I could use the domain's IP address.
+It's important to note that iptables will make a DNS lookup only at the time of the creation of the rule.
+For this reason, Its is preferable to use the IP address of the domain.
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20outcome.png)
 The rules have been applied and we can see that we drop the packages coming from facebook.com and we accept the packages from cnn.com
-![image alt]( iptablesblock)
+![image alt](https://github.com/fabianvagi91/projects/blob/6950366e5c8cfa3a78b012dac15e9eeaee5d1cd2/iptables-blockport.jpg)
+
+
