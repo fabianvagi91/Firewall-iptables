@@ -10,8 +10,8 @@ Also in tryhackme.com im in the top %5.
 I am particularly interested in network security, SOC, IDS, and malware analysis.
 
 
-# projects
-Linux Firewall using iptables
+# Linux Firewall using iptables
+
 During my studies, I learned about network security and how important is to take measurements in securing our network.
 So for my first project, I choose to build a simple but effective firewall in my Kali Linux virtual machine.
 A firewall is a subsystem on a computer that blocks or allows certain network traffic from going into or out of our computer.
@@ -55,7 +55,7 @@ As the result of blocking the port 80 and 443 we dont recieve any package from a
 ![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/ipttables%20end.png)
 I was experimenting and learning with this framework so erased all the rules that I made using the command sudo iptables -F.
 
-conclution 
+# conclusion
 
 I acquired a deeper understanding of how firewalls work and explored different open-source frameworks in Kali Linux. I learned about the iptables framework and the new version, nftables. Nftables is better suited for larger networks, and although migrating from the old version (iptables) to the new version is challenging, I chose to experiment with nftables in a home network.
 
