@@ -24,7 +24,7 @@ I choose iptables due to their user-friendliness and because it's a long-standin
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20help.jpg)
 In this picture we can see the useful commands.
--A is append rule to the chain -D delete rule  -L list -F erase list -j target -s source -d destination
+-A is append rule to the chain -D delete rule  -L list -F erase list -j target -s source -d destination 
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/72d91838330502b7a7e96f8cd8241c9721629cdd/iptablespolicy.png)
 This is the default configuration and all the chains are in ACCEPT. 
@@ -36,11 +36,16 @@ To block any connection coming and going to our computer from facebook.com
 It's important to note that iptables will make a DNS lookup only at the time of the creation of the rule.
 For this reason, Its is preferable to use the IP address of the domain.
 ![image alt](https://github.com/fabianvagi91/projects/blob/c586794015d09f7287cf1434e439ad19697d0210/iptablescnnblock.jpg)
+In the second rule that we applied i created a rule that accept any package coming from cnn.
+Therefore i pinged the IP address of the domain.
 
-
-![image alt](https://github.com/fabianvagi91/projects/blob/d3c14782a55a493677f2f5d8b0014b5e2f79f168/iptables%20outcome.png)
+![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/iptablesoutcome.png)
 The rules have been applied and we can see that we drop the packages coming from facebook.com and we accept the packages from cnn.com
+With facebook.com we dont have a response because its blocked and cnn.com we allowed to recieve traffic.
 ![image alt](https://github.com/fabianvagi91/projects/blob/6950366e5c8cfa3a78b012dac15e9eeaee5d1cd2/iptables-blockport.jpg)
-
+In the third rule that i applied two rules that blocks outgoing traffic to ports 80 and 443 which are HTTP and HTTPS traffic respectivetly.
+Any attemt to access websites from my kali machine will be bocked.
 ![image alt](https://github.com/fabianvagi91/projects/blob/c586794015d09f7287cf1434e439ad19697d0210/iptables%20outcome2.png)
 
+![image alt](https://github.com/fabianvagi91/projects/blob/a704e92ec51dc45474e94a277f317eb9540f2f52/ipttables%20end.png)
+Becasue i was experimenting with this framework i erased all the rules that i made using the command sudo iptables -F.
