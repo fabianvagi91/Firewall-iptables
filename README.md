@@ -27,7 +27,7 @@ In this picture we can see the useful commands.
 -A is append rule to the chain -D delete rule  -L list -F erase list -j target -s source -d destination 
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/72d91838330502b7a7e96f8cd8241c9721629cdd/iptablespolicy.png)
-.[!IMPORTANT]This is the default configuration and all the chains are in ACCEPT. 
+This is the default configuration and all the chains are in ACCEPT. 
 This means that we accept connections without restrictions.
 
 ![image alt](https://github.com/fabianvagi91/projects/blob/6950366e5c8cfa3a78b012dac15e9eeaee5d1cd2/Iptablesblockfacebook.jpg) 
@@ -58,6 +58,5 @@ I was experimenting and learning with this framework so erased all the rules tha
 # conclusion
 
 I acquired a deeper understanding of how firewalls work and explored different open-source frameworks in Kali Linux. I learned about the iptables framework and the new version, nftables. Nftables is better suited for larger networks, and although migrating from the old version (iptables) to the new version is challenging, I chose to experiment with nftables in a home network.
-.[!CAUTION]
 The order of the rules is critical. This means that iptables will search through the rules until it finds a match. For example, if the last two rules drop ports 80 and 443 and are placed before the domain rule, the user would never be able to reach cnn.com, as the drop rules would match before reaching the domain rule.
 
